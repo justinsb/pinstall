@@ -43,6 +43,10 @@ def chown(path, owner, group):
     cmd = ['chown', owner + ':' + group, path]
     run_command(cmd)
 
+def create_group(name):
+    cmd = ['groupadd', name]
+    run_command(cmd)
+
 def create_user(name):
     cmd = ['adduser', '--system', '--no-create-home', '--group', name]
     run_command(cmd)
