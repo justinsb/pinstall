@@ -44,6 +44,7 @@ def chown(path, owner, group):
     run_command(cmd)
 
 def create_group(name):
+    # -f means it won't fail if group already exists, but we don't want to ignore this error
     cmd = ['groupadd', name]
     run_command(cmd)
 
