@@ -47,8 +47,8 @@ def create_group(name):
     cmd = ['groupadd', name]
     run_command(cmd)
 
-def create_user(name):
-    cmd = ['adduser', '--system', '--no-create-home', '--group', name]
+def create_user(name, group):
+    cmd = ['useradd', '--system', '-g', group, name]
     run_command(cmd)
 
 def clone_source(repo):
